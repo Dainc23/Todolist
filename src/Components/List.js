@@ -17,8 +17,8 @@ const List = () => {
             name: "Le Duy Anh"
         }]
     )
-    useEffect(
-        SetArr(JSON.parse(localStorage.getItem("arr")))
+    useEffect(()=>{
+        SetArr(JSON.parse(localStorage.getItem("arr")))},[]
     )
     const RemovebyId=(id)=>{
         SetArr(arr.filter(item=>item.id !=id))
